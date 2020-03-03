@@ -1,0 +1,120 @@
+.frame {
+    position: relative;
+    margin-bottom: 10px;
+    border: 2px solid #7c7d7e;
+    &:hover {
+        border: 2px solid #9acd32;
+    }
+    &:hover > .img-wrapper-delete, &:hover > .img-wrapper-copy {
+        display: flex;
+    }
+    &__item {
+        width: 96px;
+        height: 96px;
+        box-sizing: border-box;
+        background-color: #fff8dc;
+        cursor: pointer;
+        
+    }
+}
+.frame-active {
+    border: 2px solid #fdd700;
+    &:hover {
+        border: 2px solid #fdd700;
+    }
+}
+.number-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #fdd700;
+    border-bottom-right-radius: 6px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+.img-wrapper-delete {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom-left-radius: 6px;
+    background:  rgba(100,100,100, 0.6);
+    img {
+        display: block;
+    }
+    &:hover > .delete__window {
+        display: block;
+        left: -50px;
+        top: 39px;
+    }
+}
+.delete__window {
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    left:16px;
+    top:40px;
+    background-color: #4c5255;
+    color: #222;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+.img-wrapper-copy {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 6px;
+    background:  rgba(100,100,100, 0.6);
+    img {
+        display: block;
+    }
+    &:hover > .delete__window {
+        display: block;
+        left: -50px;
+        top: -27px;
+    }
+}
+.frame-canvas {
+    width: 96px;
+    height: 96px;
+    image-rendering: pixelated;
+}
+.add-frame {
+    position: relative;
+    display: flex;
+    width: 96px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    border: 2px solid #7c7d7e;
+    cursor: pointer;
+    &__text {
+        color: #7c7d7e;
+    }
+    &:hover {
+        border: 2px solid #9acd32;
+    }
+    &:hover > .delete__window {
+        display: block;
+        left: 18px;
+        top: -22px;
+    }
+}
